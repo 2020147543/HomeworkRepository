@@ -1,0 +1,21 @@
+/* External style sheet */
+
+.header     {font-family: 'Fredoka One', cursive;}
+.header h1  {margin: 0px; padding: 0px; font-size: 250%;}
+.content    {font-family:''Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;'}
+
+a                   {text-decoration: none;}
+p                   {margin: 5px;}
+label               {text-align: right; display: inline-block; width: 100px; color: black;}
+input               {display: inline-block; width: 200px; height: 20px;}
+input[type=button]  {border: 2px solid; border-radius: 10px; width: 100px; height: 30px; background-color: aqua;}
+input[type=submit]  {border: 2px solid; border-radius: 10px; width: 100px; height: 30px; background-color: deepskyblue; text-decoration: ;}
+input[type=reset]   {border: 2px solid; border-radius: 10px; width: 100px; height: 30px; background-color: limegreen;}
+
+div
+{
+    margin: 0px;
+    border-bottom: 5px solid;
+    padding: 5px;
+    color: royalblue;
+}
