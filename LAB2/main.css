@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    font-family: 'Fredoka One', cursive;
+    font-family:'Times New Roman', Times, serif;
     padding: 5px;
     color: royalblue;
 }
@@ -39,8 +39,6 @@ nav .btn {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    font-family: fantasy;
-    
 }
 
 div {
