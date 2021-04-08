@@ -1,0 +1,140 @@
+/* External style sheet */
+a                   {text-decoration: none;}
+p                   {margin-top: 3px; margin-bottom: 3px; text-align: justify}
+label               {text-align: right; display: inline-block; width: 100px; color: black;}
+input               {display: inline-block; width: 200px; height: 20px;}
+input[type=submit]  {border: 2px solid; border-radius: 10px; width: 100px; height: 30px; background-color: deepskyblue;}
+input[type=reset]   {border: 2px solid; border-radius: 10px; width: 100px; height: 30px; background-color: limegreen;}
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > * {
+    margin: 0px;
+    padding: 0px;
+    width: 1000px;
+}
+
+div {
+    margin: 5px;
+}
+
+header {
+    font-family:'Times New Roman', Times, serif;
+    padding: 5px;
+    color: royalblue;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 250%;
+    white-space: nowrap;
+    animation-name: slidingText;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+}
+
+@keyframes slidingText {
+    from    {padding-left: 1000px;}
+    to      {padding-left: 0px;}
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: royalblue;
+}
+
+nav .btn {
+    color: white;
+    background-color: royalblue;
+    border-right: 1px solid;
+    border-color: black;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    width: 50px;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    color: royalblue;
+}
+
+h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+/* class */
+.content {
+    font-family:''Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif';
+    color: royalblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.item_list {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+.item {
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    transition: transform 2s;
+}
+
+.item img:hover {
+    transform: translate(150px, 150px) scale(4, 4);
+}
+
+@keyframes itemImage {
+    from    {width: 100px; height: 100px;}
+    to      {width: 400px; height: 400px;}
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.information section {
+    margin: 10px;
+    column-count: 2;
+    column-gap: 20px;
+    column-width: 300px;
+    column-rule-width: 1px;
+    column-rule-style: solid;
+}
+

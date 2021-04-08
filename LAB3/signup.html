@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Signup</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <header>
+            <h1>Internet Programming E-Commerce</h1>
+        </header>
+
+        <nav>
+            <a class="btn" href="index.html">Main</a>
+            <a class="btn" href="login.html">Login</a>
+            <a class="btn" href="signup.html">SignUp</a>
+        </nav>
+            
+        <div class="content">
+            <h2>SignUp</h2>
+            <form action="" method="post">
+                <h3>Enter user information:</h3>
+                <p>
+                    <label>Name: </label>
+                    <input name="name" type="text" placeholder="Enter your name" autocomplete="on" autofocus required>
+                </p>
+                <p>
+                    <label>Date of Birth: </label>
+                    <input name="birth" type="date" required>
+                </p>
+                <p>
+                    <label>Email: </label>
+                    <input name="email" type="email" placeholder="example@example.com" autocomplete="on" required>
+                </p>
+                <p>
+                    <label>Tel: </label>
+                    <input name="phone" type="tel" placeholder="###-####-####" 
+                    pattern="\d{3}-\d{4}-\d{4}">
+                    <label style="text-align: left;">(optional)</label>
+                </p>
+                <p>
+                    <label>ID: </label>
+                    <input name="ID" type="text" placeholder="Enter your ID" required>
+                </p>
+                <p>
+                    <label>PW: </label>
+                    <input name="PW" type="password" placeholder="Enter your password" required>
+                </p>
+                <p>
+                    <label>Confirm PW: </label>
+                    <input name="Confirm" type="password" placeholder="Confirm password" required>
+                </p>
+                <p>
+                    <input type="submit" value="SignUp">
+                    <input type="reset" value="Clear">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
