@@ -119,11 +119,6 @@ form {
     transform: translate(150px, 150px) scale(4, 4);
 }
 
-@keyframes itemImage {
-    from    {width: 100px; height: 100px;}
-    to      {width: 400px; height: 400px;}
-}
-
 .information {
     display: flex;
     flex-direction: column;
@@ -134,7 +129,7 @@ form {
     column-count: 2;
     column-gap: 20px;
     column-width: 300px;
-    column-rule-width: 1px;
     column-rule-style: solid;
+    column-rule-width: 1px;
 }
 
