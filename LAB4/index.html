@@ -8,6 +8,8 @@
             let num = 0;
 
             document.addEventListener('DOMContentLoaded', loadItem);
+            document.getElementById('search_category').addEventListener(onchange, loadByCategory());
+            document.getElementById('search_button').addEventListener(onclick, loadByKeyword());
 
             // Infinite Scroll
             window.onscroll = () => {
@@ -37,9 +39,23 @@
             function add_item(itemObj) {
                 const item = document.createElement('div');
                 item.className = "item";
-                item.innerHTML = itemObj.name;
+
+                const item_image = document.createElement('img')
+                image.setAttribute("src", itemObj.image);
+                image.setAttribute("alt", itemObj.name);
+                item.appendChild(item_image);
+
                 document.getElementById('item_list').appendChild(item);
             }
+
+            function loadByCategory() {
+                console.log("loadByCategory");
+            }
+
+            function loadByKeyword() {
+                console.log("loadByKeyword");
+            }
+
         </script>
     </head>
     
@@ -69,13 +85,13 @@
 
                 <p><label>Enter search item:</label></p>
                 <p><input type="text" id="search_keyword" style="width: 180px;"></p>
-                <p><button>Filter results</button></p>
+                <p><button id="search_button">Filter results</button></p>
             </div>
 
             <div class="items">
                 <h2 style="margin-bottom: 5px;">Items</h2>
                 <div class="item_list" id="item_list">
-                    <!-- items are placed here -->>
+                    <!-- items are placed here -->
                 </div>
             </div>
         </div>

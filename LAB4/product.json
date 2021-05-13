@@ -1,73 +1,172 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "name": "Super Mushroom",
-        "category": "mushroom",
+        "category": "Mushroom",
         "price": "100",
         "image": "./images/super-mushroom.jpg",
-        "description": "A mushroom that makes you bigger"
+        "description": "Transforms you into a Super form"
+    },
+
+    {
+        "id": 1,
+        "name": "1-UP Mushroom",
+        "category": "Mushroom",
+        "price": "100",
+        "image": "./images/1-up-mushroom.jpg",
+        "description": "Gain 1 Extra Life"
     },
 
     {
         "id": 2,
-        "name": "1UP Mushroom",
-        "category": "mushroom",
+        "name": "Mega Mushroom",
+        "category": "Mushroom",
         "price": "100",
-        "image": "1UP-mushroom.jpg",
-        "description": ""
+        "image": "./images/mega-mushroom.jpg",
+        "description": "Enlarges you temporarily"
     },
 
     {
         "id": 3,
-        "name": "Green Shell",
-        "category": "shell",
+        "name": "Poison Mushroom",
+        "category": "Mushroom",
         "price": "100",
-        "image": "green-shell.jpg",
-        "description": ""
+        "image": "./images/poison-mushroom.jpg",
+        "description": "Reduce 1 Power-up"
     },
 
     {
         "id": 4,
-        "name": "Red Shell",
-        "category": "shell",
+        "name": "Mini Mushroom",
+        "category": "Mushroom",
         "price": "100",
-        "image": "red-shell.jpg",
-        "description": ""
+        "image": "./images/mini-mushroom.jpg",
+        "description": "Shrinks you greatly in size"
     },
 
     {
         "id": 5,
-        "name": "Fire Flower",
-        "category": "flower",
+        "name": "Propeller Mushroom",
+        "category": "Mushroom",
         "price": "100",
-        "image": "fire-flower.jpg",
-        "description": ""
+        "image": "./images/propeller-mushroom.jpg",
+        "description": "Gives you a propeller suit"
     },
 
     {
         "id": 6,
-        "name": "Ice Flower",
-        "category": "flower",
+        "name": "Fire Flower",
+        "category": "Flower",
         "price": "100",
-        "image": "ice-flower.jpg",
-        "description": ""
+        "image": "/images/fire-flower.jpg",
+        "description": "Gives you an ability to throw fireballs"
     },
 
     {
         "id": 7,
-        "name": "Super Star",
-        "category": "special",
+        "name": "Ice Flower",
+        "category": "Flower",
         "price": "100",
-        "image": "super-star.jpg",
-        "description": ""
+        "image": "./images/ice-flower.jpg",
+        "description": "Gives you an ability to throw iceballs"
     },
 
     {
         "id": 8,
+        "name": "Cloud Flower",
+        "category": "Flower",
+        "price": "100",
+        "image": "./images/cloud-flower.jpg",
+        "description": "Gives you an ability to create cloud platforms "
+    },
+
+    {
+        "id": 9,
+        "name": "Gold Flower",
+        "category": "Flower",
+        "price": "100",
+        "image": "./images/gold-flower.jpg",
+        "description": "Gives you an ability to throw gold fireballs"
+    },
+
+    {
+        "id": 10,
+        "name": "Boomeran Flower",
+        "category": "Flower",
+        "price": "100",
+        "image": "./images/boomerang-flower.jpg",
+        "description": "Gives you an ability to throw a boomerang"
+    },
+
+    {
+        "id": 11,
+        "name": "Super Leaf",
+        "category": "leaf",
+        "price": "100",
+        "image": "./image/super-leaf.jpg",
+        "description": "Transforms you into a Raccoon form"
+    },
+
+    {
+        "id": 12,
+        "name": "Invincibility Leaf",
+        "category": "leaf",
+        "price": "100",
+        "image": "./images/invincibility-leaf.jpg",
+        "description": "Transforms you into a Raccoon form with a temporal invincibility"
+    },
+
+    {
+        "id": 13,
+        "name": "Statue Leaf",
+        "category": "leaf",
+        "price": "100",
+        "image": "./images/statue-leaf.jpg",
+        "description": "Transforms you into a Statue Tanooki"
+    },
+
+    {
+        "id": 14,
+        "name": "Super Acorn",
+        "category": "acorn",
+        "price": "100",
+        "image": "./images/super-acorn.jpg",
+        "description": "Gives you a Flying Squirrel Suit"
+    },
+
+    {
+        "id": 15,
+        "name": "P Acorn",
+        "category": "acorn",
+        "price": "100",
+        "image": "./images/p-acorn.jpg",
+        "description": "Gives you a P-Flying Squirrel Suit"
+    },
+
+    {
+        "id": 16,
+        "name": "Super Bell",
+        "category": "special",
+        "price": "100",
+        "image": ".jpg",
+        "description": "Gives you a cat suit"
+    },
+
+    {
+        "id": 17,
         "name": "Super Crown",
         "category": "special",
         "price": "100",
-        "image": "super-crown.jpg",
-        "description": ""
+        "image": "./images/super-crown.jpg",
+        "description": "Transforms Toadette into Peachette"
+    },
+
+    {
+        "id": 18,
+        "name": "Super Star",
+        "category": "special",
+        "price": "100",
+        "image": "./images/super-star.jpg",
+        "description": "Makes you invincible for a short period of time"
     }
 ]
