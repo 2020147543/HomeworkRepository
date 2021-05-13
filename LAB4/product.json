@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "name": "Super Mushroom",
+        "category": "mushroom",
+        "price": "100",
+        "image": "./images/super-mushroom.jpg",
+        "description": "A mushroom that makes you bigger"
+    },
+
+    {
+        "id": 2,
+        "name": "1UP Mushroom",
+        "category": "mushroom",
+        "price": "100",
+        "image": "1UP-mushroom.jpg",
+        "description": ""
+    },
+
+    {
+        "id": 3,
+        "name": "Green Shell",
+        "category": "shell",
+        "price": "100",
+        "image": "green-shell.jpg",
+        "description": ""
+    },
+
+    {
+        "id": 4,
+        "name": "Red Shell",
+        "category": "shell",
+        "price": "100",
+        "image": "red-shell.jpg",
+        "description": ""
+    },
+
+    {
+        "id": 5,
+        "name": "Fire Flower",
+        "category": "flower",
+        "price": "100",
+        "image": "fire-flower.jpg",
+        "description": ""
+    },
+
+    {
+        "id": 6,
+        "name": "Ice Flower",
+        "category": "flower",
+        "price": "100",
+        "image": "ice-flower.jpg",
+        "description": ""
+    },
+
+    {
+        "id": 7,
+        "name": "Super Star",
+        "category": "special",
+        "price": "100",
+        "image": "super-star.jpg",
+        "description": ""
+    },
+
+    {
+        "id": 8,
+        "name": "Super Crown",
+        "category": "special",
+        "price": "100",
+        "image": "super-crown.jpg",
+        "description": ""
+    }
+]
