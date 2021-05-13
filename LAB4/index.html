@@ -16,21 +16,21 @@
                 }
             }
 
-            // Fetch API: Load two new items
+            // Fetch API: Load new items (4 at once)
             function loadItem() {
-                let list;
                 fetch('product.json')
                 .then(response => {
                     return response.json();
                 })
                 .then(json => {
-                   add_item(json[num++]);
-                   add_item(json[num++]);
+                    for (let i = 0; i < 4; i++) {
+                        add_item(json[num]);
+                        num += 1;
+                    }
                 })
                 .catch(error => {
                     console.log('Error:', error)
                 });
-                console.log(num);
             }
 
             // Partial update: Adding an item to page
@@ -75,10 +75,7 @@
             <div class="items">
                 <h2 style="margin-bottom: 5px;">Items</h2>
                 <div class="item_list" id="item_list">
-                    <div class="item">
-                        <img src="super-mushroom.jpg" alt="1-Up Mushroom">
-                    </div>
-                    
+                    <!-- items are placed here -->>
                 </div>
             </div>
         </div>
