@@ -148,7 +148,7 @@
         "name": "Super Bell",
         "category": "special",
         "price": "100",
-        "image": ".jpg",
+        "image": "./images/super-bell.jpg",
         "description": "Gives you a cat suit"
     },
 

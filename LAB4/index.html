@@ -8,6 +8,8 @@
             let num = 0;
 
             document.addEventListener('DOMContentLoaded', loadItem);
+            document.getElementById("search_category").addEventListener(onchange, loadByCategory);
+            document.getElementById("search_button").addEventListener(onclick, loadByKeyword);
             
             // Infinite Scroll
             window.onscroll = () => {
