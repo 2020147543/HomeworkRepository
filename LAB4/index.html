@@ -6,11 +6,10 @@
         <link rel="stylesheet" type="text/css" href="main.css">
         <script>
             let num = 0;
-
-            document.addEventListener('DOMContentLoaded', loadItem);
-            document.getElementById('search_category').addEventListener("change", loadByCategory);
-            document.getElementById('search_button').addEventListener("click", loadByKeyword);
             
+            document.addEventListener('DOMContentLoaded', loadItem);
+            
+
             // Infinite Scroll
             window.onscroll = () => {
                 if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
@@ -85,10 +84,16 @@
                     <option value="3">Flower</option>
                     <option value="4">Special</option>
                 </select>
+                <script>
+                    document.getElementById('search_category').addEventListener("change", loadByCategory);
+                </script>
 
                 <label>Enter search item:</label>
                 <input type="text" id="search_keyword" style="width: 180px;">
                 <button type="button" id="search_button">Filter results</button>
+                <script>
+                    document.getElementById('search_button').addEventListener("click", loadByKeyword);
+                </script>
             </div>
 
             <div class="items">
