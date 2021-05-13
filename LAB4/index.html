@@ -10,15 +10,18 @@
             document.addEventListener('DOMContentLoaded', load);
 
             function load() {
+                let list;
                 fetch('product.json')
-                .then(response => response.json())
-                .then(data => console.log(data))
+                .then(response => {
+                    console.log(response);
+                    return response.json();
+                })
+                .then(json => {
+                    json.log();
+                })
                 .catch(error => {
                     console.log('Error:', error)
-                })
-                console.log(response)
-                const list = JSON.parse(response)
-                add_item(list[num]);
+                });
                 num++;
             }
 

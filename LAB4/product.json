@@ -4,7 +4,7 @@
         "name": "Super Mushroom",
         "category": "mushroom",
         "price": "100",
-        "image": "super-mushroom.jpg",
+        "image": "./images/super-mushroom.jpg",
         "description": "A mushroom that makes you bigger"
     },
 
