@@ -24,8 +24,13 @@
                 })
                 .then(json => {
                     for (let i = 0; i < 4; i++) {
-                        add_item(json[num]);
-                        num += 1;
+                        if (num < json.length) {
+                            add_item(json[num]);
+                            num += 1;
+                        } else {
+                            console.log("No more items");
+                            break;
+                        }
                     }
                 })
                 .catch(error => {

@@ -58,7 +58,7 @@
         "name": "Fire Flower",
         "category": "Flower",
         "price": "100",
-        "image": "/images/fire-flower.jpg",
+        "image": "./images/fire-flower.jpg",
         "description": "Gives you an ability to throw fireballs"
     },
 
@@ -103,7 +103,7 @@
         "name": "Super Leaf",
         "category": "leaf",
         "price": "100",
-        "image": "./image/super-leaf.jpg",
+        "image": "./images/super-leaf.jpg",
         "description": "Transforms you into a Raccoon form"
     },
 
