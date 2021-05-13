@@ -8,7 +8,6 @@
             let num = 0;
             
             document.addEventListener('DOMContentLoaded', loadItem);
-            
 
             // Infinite Scroll
             window.onscroll = () => {
@@ -53,11 +52,11 @@
             }
 
             function loadByCategory() {
-                console.log("loadByCategory");
+                console.log(this.value);
             }
 
             function loadByKeyword() {
-                console.log("loadByKeyword");
+                console.log(document.getElementById('search_keyword').value);
             }
 
         </script>
@@ -79,10 +78,11 @@
                 <h2>Search</h2>
                 <label>Choose a category:</label>
                 <select name="category" id="search_category" style="width: 180px;">
-                    <option value="1">Mushroom</option>
-                    <option value="2">Shell</option>
-                    <option value="3">Flower</option>
-                    <option value="4">Special</option>
+                    <option value="Mushroom">Mushroom</option>
+                    <option value="Flower">Flower</option>
+                    <option value="Leaf">Leaf</option>
+                    <option value="Acorn">Acorn</option>
+                    <option value="Special">Special</option>
                 </select>
                 <script>
                     document.getElementById('search_category').addEventListener("change", loadByCategory);
