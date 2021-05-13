@@ -8,8 +8,8 @@
             let num = 0;
 
             document.addEventListener('DOMContentLoaded', loadItem);
-            document.getElementById("search_category").addEventListener(onchange, loadByCategory);
-            document.getElementById("search_button").addEventListener(onclick, loadByKeyword);
+            document.getElementById('search_category').addEventListener("change", loadByCategory);
+            document.getElementById('search_button').addEventListener("click", loadByKeyword);
             
             // Infinite Scroll
             window.onscroll = () => {
@@ -90,7 +90,7 @@
 
                 <p><label>Enter search item:</label></p>
                 <p><input type="text" id="search_keyword" style="width: 180px;"></p>
-                <p><button id="search_button">Filter results</button></p>
+                <p><button type="button" id="search_button">Filter results</button></p>
             </div>
 
             <div class="items">
