@@ -148,13 +148,8 @@ form label {
 }
 
 .item img {
-    width: 100px;
-    height: 100px;
-    transition: transform 2s;
-}
-
-.item img:hover {
-    transform: translate(135px, 135px) scale(3.7, 3.7);
+    width: 100%;
+    height: 100%;
 }
 
 .information {
