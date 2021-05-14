@@ -56,30 +56,32 @@
                 const item = document.createElement('div');
                 item.className = "item";
                 item.id = itemObj.item_id;
+                let img_url = "url(" + itemObj.image + ")";
+                item.setAttribute("background-image", img_url)
 
-                // put item image
-                const item_image = document.createElement('img');
-                item_image.setAttribute("src", itemObj.image);
-                item_image.setAttribute("alt", itemObj.name);
-                item.appendChild(item_image);
+                // // put item image
+                // const item_image = document.createElement('img');
+                // item_image.setAttribute("src", itemObj.image);
+                // item_image.setAttribute("alt", itemObj.name);
+                // item.appendChild(item_image);
 
-                // put name
-                const item_name = document.createElement('p');
-                item_name.id = "name";
-                item_name.innerHTML = itemObj.name;
-                item.appendChild(item_name);
+                // // put name
+                // const item_name = document.createElement('p');
+                // item_name.id = "name";
+                // item_name.innerHTML = itemObj.name;
+                // item.appendChild(item_name);
 
-                // put price
-                const item_price = document.createElement('p');
-                item_price.id = "price";
-                item_price.innerHTML = itemObj.price;
-                item.appendChild(item_price);
+                // // put price
+                // const item_price = document.createElement('p');
+                // item_price.id = "price";
+                // item_price.innerHTML = itemObj.price;
+                // item.appendChild(item_price);
 
-                // put description
-                const item_description = document.createElement('p');
-                item_description.id = "description";
-                item_description.innerHTML = itemObj.description;
-                item.appendChild(item_description);
+                // // put description
+                // const item_description = document.createElement('p');
+                // item_description.id = "description";
+                // item_description.innerHTML = itemObj.description;
+                // item.appendChild(item_description);
 
                 // add onclick eventlistener
                 item.addEventListener('click', focusItem);
