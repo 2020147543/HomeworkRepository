@@ -98,10 +98,10 @@
                 // remove focus from the previously focused item
                 let previous = document.getElementsByClassName('item_focused');
                 if (previous.length != 0) {
-                    previous[0].className = "item";
+                    previous[0].setAttribute('class', 'item')
                 }
                 console.log(this);
-                this.className = "item_focused";
+                this.setAttribute('class', 'item_focused');
             }
 
             function filterItems() {
