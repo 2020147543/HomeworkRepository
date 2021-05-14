@@ -45,7 +45,7 @@
                     }
                 })
                 .catch(error => {
-                    console.log('Error:', error)
+                    console.log('Error:', error);
                 });
             }
 
@@ -78,7 +78,9 @@
             }
 
             function focusItem() {
-                this.className = "item_focused"
+                console.log("clicked");
+                console.log(this);
+                this.className = "item_focused";
             }
 
             function filterItems() {
