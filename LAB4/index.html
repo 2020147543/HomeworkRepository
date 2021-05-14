@@ -18,8 +18,9 @@
                 }
             }
 
-            // Fetch API: Load new items (4 at once)
+            // Load new items (4 at once)
             function loadItem() {
+                // fetch product list
                 fetch('product.json')
                 .then(response => {
                     return response.json();
@@ -46,15 +47,15 @@
                 })
                 .catch(error => {
                     console.log('Error:', error);
-                })
-                .finally(() => {
-                    let items = document.getElementsByClassName("item")
-                    if (items != null) {
-                        for (let i = 0; i < items.length; i++) {
-                            items[0].addEventListener('click', focusItem);
-                        }
-                    }
                 });
+
+                // register click event to all items
+                let items = document.getElementsByClassName("item")
+                if (items != null) {
+                    for (let i = 0; i < items.length; i++) {
+                        items[0].addEventListener('click', focusItem);
+                    }
+                }
             }
 
             // Partial update: Adding an item to page
@@ -64,29 +65,44 @@
                 item.className = "item";
                 item.id = itemObj.item_id;
 
-                // put item image
+                // add item image
                 const item_image = document.createElement('img');
                 item_image.setAttribute("src", itemObj.image);
                 item_image.setAttribute("alt", itemObj.name);
                 item.appendChild(item_image);
 
-                // put item name
-                const item_name = document.createElement('h3');
+                // add name
+                const item_name = document.createElement('p');
+                item_name.id = "name";
                 item_name.innerHTML = itemObj.name;
                 item.appendChild(item_name);
 
-                // put item price
-                const item_price = document.createElement('h3')
+                // add price
+                const item_price = document.createElement('p');
+                item_price.id = "price";
                 item_price.innerHTML = itemObj.price;
                 item.appendChild(item_price);
+
+                // add description
+                const item_description = document.createElement('p');
+                item_description.id = "description";
+                item_description.innerHTML = itemObj.description;
+                item.appendChild(item_description);
 
                 // append item to the item list
                 document.getElementById('item_list').appendChild(item);
             }
 
             function focusItem() {
-                console.log("clicked");
+                console.log("focus");
                 console.log(this);
+
+                // defocus the focused item (if there is one)
+                let focus = document.getElementsByClassName("item_focus");
+                if (focus != null) {
+                    focus[0].className = "item";
+                }
+
                 this.className = "item_focus";
             }
 

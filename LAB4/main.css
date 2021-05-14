@@ -152,6 +152,16 @@ form label {
     align-items: center;
 }
 
+.item img {
+    width: 300px;
+    height: 300px;
+}
+
+.item p {
+    visibility: hidden;
+    text-align: center;
+}
+
 .item_focus {
     margin: 5px;
     border: 5px solid;
@@ -163,14 +173,19 @@ form label {
     align-items: center;
 }
 
-.item img {
-    width: 300px;
-    height: 300px;
+.item_focus p #name {
+    visibility: visible;
+    font-size: large;
 }
 
-.item h3 {
-    width: 100%;
-    text-align: center;
+.item_focus p #price {
+    visibility: visible;
+    font-size: medium;
+}
+
+.item_focus p #description {
+    visibility: visible;
+    font-size: small;
 }
 
 .information {
