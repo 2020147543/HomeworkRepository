@@ -10,7 +10,7 @@
             let num = 0;
             let products = null;            // JSON object (array of products)
 
-            document.addEventListener('DOMContentLoaded', loadJSON);
+            document.addEventListener("DOMContentLoaded", loadJSON);
 
             // Infinite Scroll
             window.onscroll = () => {
@@ -22,7 +22,7 @@
             // load product information
             function loadJSON() {
                 // fetch product list
-                fetch('product.json')
+                fetch("product.json")
                 .then(response => {
                     return response.json();
                 })
@@ -30,7 +30,7 @@
                     products = json;
                 })
                 .catch(error => {
-                    console.log('Error:', error);
+                    console.log("Error:", error);
                 })
                 .finally(() => {
                     displayItems();
@@ -53,7 +53,7 @@
                             num += 1;
                         }
                     } else {
-                        console.log('No more items');
+                        console.log("No more items");
                         break;
                     }
                 }
@@ -62,56 +62,67 @@
             // Partial update: Adding an item to page
             function addItem(itemObj) {
                 // create a new item element (div)
-                const item = document.createElement('div');
+                const item = document.createElement("div");
                 item.className = "item";
                 item.id = itemObj.item_id;
                 let img_url = "no-repeat center/contain url(" + itemObj.image + ")";
                 item.style.background = img_url;
 
                 // put name
-                const item_name = document.createElement('p');
+                const item_name = document.createElement("p");
                 item_name.id = "name";
                 item_name.innerHTML = itemObj.name;
                 item.appendChild(item_name);
 
                 // put price
-                const item_price = document.createElement('p');
+                const item_price = document.createElement("p");
                 item_price.id = "price";
                 item_price.innerHTML = itemObj.price;
                 item.appendChild(item_price);
 
                 // put description
-                const item_description = document.createElement('p');
+                const item_description = document.createElement("p");
                 item_description.id = "description";
                 item_description.innerHTML = itemObj.description;
                 item.appendChild(item_description);
 
                 // add onclick eventlistener
-                item.addEventListener('click', focusItem);
+                item.addEventListener("click", focusItem);
 
                 // append item to the item list
-                document.getElementById('item_list').appendChild(item);
+                document.getElementById("item_list").appendChild(item);
             }
 
             // displays the details of an item when clicked (changes style by CSS)
             function focusItem() {
                 // remove focus from the previously focused item
-                let previous = document.getElementsByClassName('item_focused');
+                let previous = document.getElementsByClassName("item_focused");
                 if (previous.length != 0) {
-                    previous[0].setAttribute('class', 'item')
+                    previous[0].setAttribute("class", "item")
                 }
-                console.log(this);
-                this.setAttribute('class', 'item_focused');
+                this.setAttribute("class", "item_focused");
             }
 
             function filterItems() {
                 num = 0;
-                search_category = document.getElementById('search_category').value;
-                search_keyword = document.getElementById('search_keyword').value;
+                search_category = document.getElementById("search_category").value;
+                search_keyword = document.getElementById("search_keyword").value;
 
-                // Clear the item list and reload
-                document.getElementById('item_list').innerHTML = '';
-                displayItems();
+                // If no items match the filter condition, display "No result"
+                // Otherwise, clear the item list and reload
+                let no_result = true;
+                for (let i = 0; i < products.length; i++) {
+                    if ((search_category == "All" || products[i].category == search_category) 
+                    && products[i].name.toLowerCase().includes(search_keyword.toLowerCase())) {
+                        no_result = false;
+                    }
+                }
+                if (no_result) {
+                    document.getElementById("item_list").innerHTML = "No result";
+                } else {
+                    document.getElementById("item_list").innerHTML = "";
+                    displayItems();
+                }
             }
         </script>
     </head>
