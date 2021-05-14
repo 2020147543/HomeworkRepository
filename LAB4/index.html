@@ -46,6 +46,14 @@
                 })
                 .catch(error => {
                     console.log('Error:', error);
+                })
+                .finally(() => {
+                    let items = document.getElementsByClassName("item")
+                    if (items != null) {
+                        for (let i = 0; i < items.length; i++) {
+                            items[0].addEventListener('click', focusItem);
+                        }
+                    }
                 });
             }
 
@@ -74,13 +82,12 @@
 
                 // append item to the item list
                 document.getElementById('item_list').appendChild(item);
-                item.addEventListener(onclick, focusItem);
             }
 
             function focusItem() {
                 console.log("clicked");
                 console.log(this);
-                this.className = "item_focused";
+                this.className = "item_focus";
             }
 
             function filterItems() {
