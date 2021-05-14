@@ -30,7 +30,7 @@
                             while (num < json.length) {
                                 if ((search_category == "All") || (
                                     search_category == json[num].category)) {
-                                    if (json[num].name.includes(search_keyword)) {
+                                    if (json[num].name.toLowerCase().includes(search_keyword.toLowerCase())) {
                                         add_item(json[num]);
                                     }
                                 }
@@ -54,7 +54,7 @@
                 const item = document.createElement('div');
                 item.className = "item";
                 item.id = itemObj.item_id;
-                
+
                 // put item image
                 const item_image = document.createElement('img');
                 item_image.setAttribute("src", itemObj.image);
@@ -113,10 +113,7 @@
 
                 <label>Enter search item:</label>
                 <input type="text" id="search_keyword" style="width: 180px;">
-                <button type="button" id="filter_button">Filter results</button>
-                <script>
-                    document.getElementById('filter_button').addEventListener(onclick, filterItems);
-                </script>
+                <button type="button" id="filter_button" onclick="filterItems()">Filter results</button>
             </div>
 
             <div class="items">
