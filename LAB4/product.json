@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "item_id": 0,
         "name": "Super Mushroom",
         "category": "Mushroom",
         "price": "100",
@@ -9,7 +9,7 @@
     },
 
     {
-        "id": 1,
+        "item_id": 1,
         "name": "1-UP Mushroom",
         "category": "Mushroom",
         "price": "100",
@@ -18,7 +18,7 @@
     },
 
     {
-        "id": 2,
+        "item_id": 2,
         "name": "Mega Mushroom",
         "category": "Mushroom",
         "price": "100",
@@ -27,7 +27,7 @@
     },
 
     {
-        "id": 3,
+        "item_id": 3,
         "name": "Poison Mushroom",
         "category": "Mushroom",
         "price": "100",
@@ -36,7 +36,7 @@
     },
 
     {
-        "id": 4,
+        "item_id": 4,
         "name": "Mini Mushroom",
         "category": "Mushroom",
         "price": "100",
@@ -45,7 +45,7 @@
     },
 
     {
-        "id": 5,
+        "item_id": 5,
         "name": "Propeller Mushroom",
         "category": "Mushroom",
         "price": "100",
@@ -54,7 +54,7 @@
     },
 
     {
-        "id": 6,
+        "item_id": 6,
         "name": "Fire Flower",
         "category": "Flower",
         "price": "100",
@@ -63,7 +63,7 @@
     },
 
     {
-        "id": 7,
+        "item_id": 7,
         "name": "Ice Flower",
         "category": "Flower",
         "price": "100",
@@ -72,7 +72,7 @@
     },
 
     {
-        "id": 8,
+        "item_id": 8,
         "name": "Cloud Flower",
         "category": "Flower",
         "price": "100",
@@ -81,7 +81,7 @@
     },
 
     {
-        "id": 9,
+        "item_id": 9,
         "name": "Gold Flower",
         "category": "Flower",
         "price": "100",
@@ -90,7 +90,7 @@
     },
 
     {
-        "id": 10,
+        "item_id": 10,
         "name": "Boomeran Flower",
         "category": "Flower",
         "price": "100",
@@ -99,7 +99,7 @@
     },
 
     {
-        "id": 11,
+        "item_id": 11,
         "name": "Super Leaf",
         "category": "Leaf",
         "price": "100",
@@ -108,7 +108,7 @@
     },
 
     {
-        "id": 12,
+        "item_id": 12,
         "name": "Invincibility Leaf",
         "category": "Leaf",
         "price": "100",
@@ -117,7 +117,7 @@
     },
 
     {
-        "id": 13,
+        "item_id": 13,
         "name": "Statue Leaf",
         "category": "Leaf",
         "price": "100",
@@ -126,7 +126,7 @@
     },
 
     {
-        "id": 14,
+        "item_id": 14,
         "name": "Super Acorn",
         "category": "Acorn",
         "price": "100",
@@ -135,7 +135,7 @@
     },
 
     {
-        "id": 15,
+        "item_id": 15,
         "name": "P Acorn",
         "category": "Acorn",
         "price": "100",
@@ -144,7 +144,7 @@
     },
 
     {
-        "id": 16,
+        "item_id": 16,
         "name": "Super Bell",
         "category": "Special",
         "price": "100",
@@ -153,7 +153,7 @@
     },
 
     {
-        "id": 17,
+        "item_id": 17,
         "name": "Super Crown",
         "category": "Special",
         "price": "100",
@@ -162,7 +162,7 @@
     },
 
     {
-        "id": 18,
+        "item_id": 18,
         "name": "Super Star",
         "category": "Special",
         "price": "100",

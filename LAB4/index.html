@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="main.css">
         <script>
             let num = 0;
+            let search_category = "All"; // All by default, (Mushroom, Flower, ...)
+            let search_keyword = ""; // Empty by default
             
             document.addEventListener('DOMContentLoaded', loadItem);
 
@@ -25,8 +27,16 @@
                 .then(json => {
                     for (let i = 0; i < 4; i++) {
                         if (num < json.length) {
-                            add_item(json[num]);
-                            num += 1;
+                            while (num < json.length) {
+                                if ((search_category == "All") || (
+                                    search_category == json[num].category)) {
+                                    if (json[num].name.includes(search_keyword)) {
+                                        add_item(json[num]);
+                                    }
+                                }
+                                num += 1;
+                                break;
+                            }
                         } else {
                             console.log("No more items");
                             break;
@@ -40,25 +50,40 @@
 
             // Partial update: Adding an item to page
             function add_item(itemObj) {
+                // create a new item element (div)
                 const item = document.createElement('div');
                 item.className = "item";
-
-                const item_image = document.createElement('img')
+                item.id = itemObj.item_id;
+                
+                // put item image
+                const item_image = document.createElement('img');
                 item_image.setAttribute("src", itemObj.image);
                 item_image.setAttribute("alt", itemObj.name);
                 item.appendChild(item_image);
 
+                // put item name
+                const item_name = document.createElement('h3');
+                item_name.innerHTML = itemObj.name;
+                item.appendChild(item_name);
+
+                // put item price
+                const item_price = document.createElement('h3')
+                item_price.innerHTML = itemObj.price;
+                item.appendChild(item_price);
+
+                // append item to the item list
                 document.getElementById('item_list').appendChild(item);
             }
 
-            function loadByCategory() {
-                console.log(this.value);
-            }
+            function filterItems() {
+                num = 0;
+                search_category = document.getElementById('search_category').value;
+                search_keyword = document.getElementById('search_keyword').value;
 
-            function loadByKeyword() {
-                console.log(document.getElementById('search_keyword').value);
+                // Clear the item list and reload
+                document.getElementById('item_list').innerHTML = '';
+                loadItem();
             }
-
         </script>
     </head>
     
@@ -78,21 +103,19 @@
                 <h2>Search</h2>
                 <label>Choose a category:</label>
                 <select name="category" id="search_category" style="width: 180px;">
+                    <option value="All">All</option>
                     <option value="Mushroom">Mushroom</option>
                     <option value="Flower">Flower</option>
                     <option value="Leaf">Leaf</option>
                     <option value="Acorn">Acorn</option>
                     <option value="Special">Special</option>
                 </select>
-                <script>
-                    document.getElementById('search_category').addEventListener(onchange, loadByCategory);
-                </script>
 
                 <label>Enter search item:</label>
                 <input type="text" id="search_keyword" style="width: 180px;">
-                <button type="button" id="search_button">Filter results</button>
+                <button type="button" id="filter_button">Filter results</button>
                 <script>
-                    document.getElementById('search_button').addEventListener(onclick, loadByKeyword);
+                    document.getElementById('filter_button').addEventListener(onclick, filterItems);
                 </script>
             </div>
 
