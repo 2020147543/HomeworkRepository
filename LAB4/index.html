@@ -17,7 +17,7 @@
             // Infinite Scroll
             window.onscroll = () => {
                 if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-                    loadItem();
+                    displayItems();
                 }
             }
 
@@ -33,6 +33,9 @@
                 })
                 .catch(error => {
                     console.log('Error:', error);
+                })
+                .finally(() => {
+                    displayItems();
                 });
             }
 
