@@ -88,16 +88,13 @@
                 document.getElementById('item_list').appendChild(item);
             }
 
+            // displays the details of an item when clicked
             function focusItem() {
-                console.log("focus");
-                console.log(this);
-
                 // defocus the focused item (if there is one)
                 let focus = document.getElementsByClassName("item_focus");
-                if (focus != null) {
+                if (focus.length != 0) {
                     focus[0].className = "item";
                 }
-
                 this.className = "item_focus";
             }
 
@@ -109,6 +106,11 @@
                 // Clear the item list and reload
                 document.getElementById('item_list').innerHTML = '';
                 loadItem();
+
+                // if no items were found, display "No result" in the item list section
+                if (document.getElementsByClassName("item").length == 0) {
+                    document.getElementById('item_list').innerHTML = 'No result';
+                }
             }
         </script>
     </head>

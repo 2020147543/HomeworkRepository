@@ -153,13 +153,40 @@ form label {
 }
 
 .item img {
-    width: 300px;
-    height: 300px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.item p {
-    visibility: hidden;
+.item p #name {
+    visibility: visible;
+    z-index: 1;
+
+    position: relative;
+    top: 0px;
+    padding: 3px;
+    width: 100%;
+
+    background-color: royalblue;
     text-align: center;
+    font-size: 10px;
+    color: white;
+}
+
+.item p #price {
+    visibility: hidden;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+}
+
+.item p #description {
+    visibility: hidden;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
 }
 
 .item_focus {
@@ -173,19 +200,34 @@ form label {
     align-items: center;
 }
 
-.item_focus p #name {
-    visibility: visible;
-    font-size: large;
-}
-
 .item_focus p #price {
     visibility: visible;
-    font-size: medium;
+    z-index: 1;
+
+    position: relative;
+    top: 20px;
+    right: 3px;
+    width: 50px;
+    border-radius: 50%;
+
+    background-color: royalblue;
+    text-align: center;
+    font-size: 10px;
+    color: white;
 }
 
 .item_focus p #description {
     visibility: visible;
-    font-size: small;
+    z-index: 1;
+
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+
+    background-color: royalblue;
+    text-align: center;
+    font-size: 10px;
+    color: white;
 }
 
 .information {
