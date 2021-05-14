@@ -152,11 +152,16 @@ form label {
     align-items: center;
 }
 
-.item p #name {
+.item * {
+    margin: 0px;
+}
+
+.item #name {
     position: relative;
     top: 0px;
     padding: 3px;
     width: 100%;
+    height: 20%;
 
     background-color: royalblue;
     text-align: center;
@@ -164,15 +169,59 @@ form label {
     color: white;
 }
 
-.item p #price {
+.item #price {
+    visibility: hidden;
     width: 100%;
+    height: 10%;
+    text-align: right;
+    font-size: 10px;
+}
+
+.item #description {
+    visibility: hidden;
+    width: 100%;
+    height: 70%;
+    opacity: 50%;
+    font-size: 10px;
+}
+
+.item_focused {
+    margin: 5px;
+    border: 5px solid;
+    width: 370px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_focused #name {
+    position: relative;
+    top: 0px;
+    padding: 3px;
+    width: 100%;
+    height: 20%;
+
+    background-color: royalblue;
+    text-align: right;
+    font-size: 10px;
+    color: yellow;
+}
+
+.item_focused #price {
+    visibility: visible;
+    width: 100%;
+    height: 10%;
     text-align: center;
     font-size: 10px;
 }
 
-.item p #description {
+.item_focused #description {
+    visibility: visible;
     width: 100%;
-    text-align: center;
+    height: 70%;
+    opacity: 50%;
     font-size: 10px;
 }
 
