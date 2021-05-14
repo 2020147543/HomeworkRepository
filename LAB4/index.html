@@ -48,6 +48,10 @@
                 .catch(error => {
                     console.log('Error:', error);
                 });
+                // if no items were found, display "No result" in the item list section
+                if (document.getElementsByClassName("item").length == 0) {
+                    document.getElementById('item_list').innerHTML = 'No result';
+                }
             }
 
             // Partial update: Adding an item to page
@@ -57,7 +61,7 @@
                 item.className = "item";
                 item.id = itemObj.item_id;
                 let img_url = "url(" + itemObj.image + ")";
-                item.setAttribute("background-image", img_url)
+                item.style.backgroundImage = img_url;
 
                 // // put item image
                 // const item_image = document.createElement('img');
@@ -65,11 +69,11 @@
                 // item_image.setAttribute("alt", itemObj.name);
                 // item.appendChild(item_image);
 
-                // // put name
-                // const item_name = document.createElement('p');
-                // item_name.id = "name";
-                // item_name.innerHTML = itemObj.name;
-                // item.appendChild(item_name);
+                // put name
+                const item_name = document.createElement('p');
+                item_name.id = "name";
+                item_name.innerHTML = itemObj.name;
+                item.appendChild(item_name);
 
                 // // put price
                 // const item_price = document.createElement('p');
@@ -108,11 +112,6 @@
                 // Clear the item list and reload
                 document.getElementById('item_list').innerHTML = '';
                 loadItem();
-
-                // if no items were found, display "No result" in the item list section
-                if (document.getElementsByClassName("item").length == 0) {
-                    document.getElementById('item_list').innerHTML = 'No result';
-                }
             }
         </script>
     </head>
