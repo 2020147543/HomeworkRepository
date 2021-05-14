@@ -74,6 +74,11 @@
 
                 // append item to the item list
                 document.getElementById('item_list').appendChild(item);
+                item.addEventListener(onclick, focusItem);
+            }
+
+            function focusItem() {
+                this.className = "item_focused"
             }
 
             function filterItems() {
