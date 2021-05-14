@@ -32,6 +32,7 @@
                                     search_category == json[num].category)) {
                                     if (json[num].name.toLowerCase().includes(search_keyword.toLowerCase())) {
                                         add_item(json[num]);
+                                        num += 1;
                                         break;
                                     }
                                 }
