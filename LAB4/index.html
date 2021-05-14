@@ -7,8 +7,6 @@
         <script>
             let search_category = "All";    // All by default, (Mushroom, Flower, ...)
             let search_keyword = "";        // Empty by default
-            let focusedItem = null;
-
             let num = 0;
             let products = null;            // JSON object (array of products)
 
@@ -55,7 +53,7 @@
                             num += 1;
                         }
                     } else {
-                        console.log("No more items");
+                        console.log('No more items');
                         break;
                     }
                 }
@@ -97,14 +95,13 @@
 
             // displays the details of an item when clicked (changes style by CSS)
             function focusItem() {
-                console.log(this);
-                if (focusedItem != null) {
-                    // remove focus from the previously focused item
-                    focusedItem.className = "item"
-                    // focus on clicked item 
-                    focusedItem = this;
-                    focusedItem.className = "item_focused"
+                // remove focus from the previously focused item
+                let previous = document.getElementsByClassName('item_focused');
+                if (previous.length != 0) {
+                    previous[0].className = "item";
                 }
+                console.log(this);
+                this.className = "item_focused";
             }
 
             function filterItems() {
